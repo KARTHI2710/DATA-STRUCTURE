@@ -36,7 +36,7 @@ void middleinsert(int val,int pos)
 	newnode->next=NULL;
 	for(i=1;i<pos-1;i++){
 		temp=temp->next;	
-	}
+	}.
 	newnode->next=temp->next;
 	temp->next=newnode;	
 }
