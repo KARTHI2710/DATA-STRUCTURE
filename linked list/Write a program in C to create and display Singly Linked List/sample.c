@@ -1,25 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
+void addlast(int);
 struct node{
 	int data;
-	struct data *next;
+    struct node *next;
 };
 struct node *head;
-void addlast(int val){
-	struct node *newnode=malloc(sizeof(struct node));
-	newnode->data=val;
-	newnode->next=NULL;
-	if(head==NULL){
-		head=newnode;
-	}
-	else{
-		struct node *lastnode=head;
-		while(lastnode->next!=NULL){
-		    lastnode->next=lastnode;	
-		}
-		lastnode->next=newnode;
-	}
-}
+
 void addfirst(int val){
 	struct node *newnode=malloc(sizeof(struct node));
 	newnode->data=val;
@@ -57,4 +44,19 @@ int main(){
 		i++;
 	}
 	return 0;
+}
+void addlast(int val){
+	struct node *newnode=malloc(sizeof(struct node));
+	newnode->data=val;
+	newnode->next=NULL;
+	if(head==NULL){
+		head=newnode;
+	}
+	else{
+		struct node *lastnode=head;
+		while(lastnode->next!=NULL){
+		    lastnode->next=lastnode;	
+		}
+		lastnode->next=newnode;
+	}
 }

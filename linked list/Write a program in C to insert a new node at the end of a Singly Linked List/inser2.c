@@ -28,7 +28,9 @@ void firstcreate(int val){
 }
 void printnode(){
 	while(head!=NULL){
-		printf("%d ",head->data);
+		printf("%d \n",head->data);
+		printf("address of data%d\n",&head->data);
+		printf("address of reference %d\n",&head->next);
 		head=head->next;
 	}
 }
