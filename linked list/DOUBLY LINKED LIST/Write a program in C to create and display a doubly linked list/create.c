@@ -25,9 +25,16 @@ void createnode(int val){
 	}
 }
 void printnode(){
-	while(head!=NULL){
-		printf("%d ",head->data);
-		head=head->next;
+	struct node *temp=head;
+	while(temp!=NULL){
+		printf("address of head = %p\n",&temp);
+		printf(" simple temp=%p\n",temp);
+		printf("*temp =%p\n",*temp);
+		printf("address of prev = %p\n",&temp->prev);
+		//printf("%d \n",head->data);
+		printf("address of key = %p\n",&temp->data);
+		printf("address of next = %p\n",&temp->next);
+		temp=temp->next;
 	}
 }
 int main(){

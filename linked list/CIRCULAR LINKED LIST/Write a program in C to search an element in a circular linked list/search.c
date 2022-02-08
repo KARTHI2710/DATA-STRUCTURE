@@ -52,6 +52,5 @@ int main(){
 	printf("enter your search key\n");
 	scanf("%d",&s);
 	search(s);
-	printf("last");
 	return 0;
 }
